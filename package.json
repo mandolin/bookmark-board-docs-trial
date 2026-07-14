@@ -11,7 +11,7 @@
   "scripts": {
     "docs:clean": "node scripts/clean-docs.mjs",
     "docs:jsdoc": "jsdoc -c jsdoc.conf.json",
-    "docs:unified": "hia docs build --project-manifest hia-project.json --out docs/unified --locale zh-CN",
+    "docs:unified": "node node_modules/@hia-doc/cli/dist/index.js docs build --project-manifest hia-project.json --out docs/unified --locale zh-CN",
     "docs:build": "npm run docs:clean && npm run docs:jsdoc && npm run docs:unified",
     "test:docs": "npm run docs:build && node scripts/verify-docs.mjs"
   },
