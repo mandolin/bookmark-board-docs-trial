@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "0.1.0-draft",
+  "project": {
+    "id": "bookmark-board-docs-trial",
+    "name": "Bookmark Board Docs Trial",
+    "title": "Bookmark Board Docs Trial Reference",
+    "defaultLocale": "zh-CN",
+    "locales": [
+      "zh-CN",
+      "en"
+    ]
+  },
+  "inputs": [
+    {
+      "kind": "jsdoc-integration",
+      "path": "docs/jsdoc/hia-integration.json",
+      "domain": "js"
+    }
+  ]
+}
