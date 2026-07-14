@@ -1,0 +1,12 @@
+{
+  "name": "bookmark-board",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A small JavaScript bookmark helper project.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {}
+}
