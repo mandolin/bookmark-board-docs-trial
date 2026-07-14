@@ -1,12 +1,24 @@
 {
-  "name": "bookmark-board",
+  "name": "bookmark-board-docs-trial",
   "version": "0.1.0",
   "private": true,
-  "description": "A small JavaScript bookmark helper project.",
+  "description": "A small public JavaScript project used to verify HIA documentation packages as a consumer.",
   "type": "module",
   "license": "MIT",
   "engines": {
     "node": ">=20.19.0"
   },
-  "scripts": {}
+  "scripts": {
+    "docs:clean": "node scripts/clean-docs.mjs",
+    "docs:jsdoc": "jsdoc -c jsdoc.conf.json",
+    "docs:unified": "hia docs build --project-manifest hia-project.json --out docs/unified --locale zh-CN",
+    "docs:build": "npm run docs:clean && npm run docs:jsdoc && npm run docs:unified",
+    "test:docs": "npm run docs:build && node scripts/verify-docs.mjs"
+  },
+  "dependencies": {
+    "@hia-doc/cli": "0.1.0",
+    "@mandolin/jsdoc-plugin-hia-sys": "0.1.0",
+    "@mandolin/jsdoc-theme-hia": "0.1.0",
+    "jsdoc": "4.0.5"
+  }
 }
